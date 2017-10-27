@@ -12,14 +12,13 @@ import android.widget.ScrollView;
  * 真正的速度是看不见的 !
  * Today is today , we will go !
  */
-
-
 /*
  * ScrollView并没有实现滚动监听，所以我们必须自行实现对ScrollView的监听，
  * 我们很自然的想到在onTouchEvent()方法中实现对滚动Y轴进行监听
  * ScrollView的滚动Y值进行监听
  */
 public class TopFloatScrollView extends ScrollView {
+
     private OnScrollListener onScrollListener;
     /**
      * 主要是用在用户手指离开TopFloatScrollView，TopFloatScrollView还在继续滑动，我们用来保存Y的距离，然后做比较
@@ -68,12 +67,19 @@ public class TopFloatScrollView extends ScrollView {
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if (onScrollListener != null) {
-            Log.i("TopFloatScrollView", "---onTouchEvent()--->" + getScrollY());
+            Log.i("TopFloatScrollView", "---onTouchEvent()       --->getScrollY" + getScrollY());
             onScrollListener.onScroll(lastScrollY = getScrollY());
         }
         switch (ev.getAction()) {
             case MotionEvent.ACTION_UP:
+                Log.i("TopFloatScrollView", "---onTouchEvent()--->" + "UP");
                 handler.sendEmptyMessageDelayed(0, 20);
+                break;
+            case MotionEvent.ACTION_DOWN:
+                Log.i("TopFloatScrollView", "---onTouchEvent()--->" + "DOWN");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.i("TopFloatScrollView", "---onTouchEvent()--->" + "MOVE");
                 break;
         }
         return super.onTouchEvent(ev);

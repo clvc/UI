@@ -3,6 +3,7 @@ package com.palfund.ui.topfloat;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,6 +34,25 @@ public class TopFloatActivity extends AppCompatActivity implements TopFloatScrol
         //rlayout = (RelativeLayout)findViewById(R.id.rlayout);
         mTv = (TextView) findViewById(R.id.tv);
         tfScrollView.setOnScrollListener(this);
+        tfScrollView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int
+                    oldScrollY) {
+                if (scrollY >= searchLayoutTop) {
+                    if (search_edit.getParent() != top1) {
+                        top2.removeView(search_edit);
+                        top1.addView(search_edit);
+                    }
+                } else {
+                    if (search_edit.getParent() != top2) {
+                        top1.removeView(search_edit);
+                        top2.addView(search_edit);
+                    }
+                }
+                Log.i("TopFloatActivity", "---onScrollChange()--->scrollY" + scrollY);
+                Log.i("TopFloatActivity", "---onScrollChange()--->oldScrollY" + oldScrollY);
+            }
+        });
     }
 
     @Override
@@ -47,17 +67,17 @@ public class TopFloatActivity extends AppCompatActivity implements TopFloatScrol
     //监听滚动Y值变化，通过addView和removeView来实现悬停效果
     @Override
     public void onScroll(int scrollY) {
-        Log.i("TopFloatActivity", "---onScroll()--->" + mTv.getBottom());
-        if (scrollY >= searchLayoutTop) {
-            if (search_edit.getParent() != top1) {
-                top2.removeView(search_edit);
-                top1.addView(search_edit);
-            }
-        } else {
-            if (search_edit.getParent() != top2) {
-                top1.removeView(search_edit);
-                top2.addView(search_edit);
-            }
-        }
+        //        Log.i("TopFloatActivity", "---onScroll()--->" + mTv.getBottom());
+        //        if (scrollY >= searchLayoutTop) {
+        //            if (search_edit.getParent() != top1) {
+        //                top2.removeView(search_edit);
+        //                top1.addView(search_edit);
+        //            }
+        //        } else {
+        //            if (search_edit.getParent() != top2) {
+        //                top1.removeView(search_edit);
+        //                top2.addView(search_edit);
+        //            }
+        //        }
     }
 }
