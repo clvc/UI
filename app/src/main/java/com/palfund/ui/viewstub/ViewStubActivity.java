@@ -20,10 +20,7 @@ import com.palfund.ui.R;
  * ViewStub被绘制完成的layout文件取代，并且该layout文件的root view的id是android:inflatedId指定的id panel_import，root
  * view的布局和ViewStub视图的布局保持一致
  */
-
-
 public class ViewStubActivity extends AppCompatActivity {
-
     private ViewStub mViewStub;
     private View mView;
 

@@ -7,12 +7,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.palfund.ui.viewstub.ViewStubActivity">
-
     <View
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/colorAccent"/>
-
     <ViewStub
         android:id="@+id/viewSub"
         android:layout_width="match_parent"

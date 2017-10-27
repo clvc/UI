@@ -7,5 +7,4 @@
           android:textColor="@color/colorAccent"
           android:textSize="26sp"
     >
-
 </TextView>
