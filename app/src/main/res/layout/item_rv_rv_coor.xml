@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/iv_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_item"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:nestedScrollingEnabled="false"
+        />
+</LinearLayout>
+    <!--
+    android:nestedScrollingEnabled="false"解决RecyclerView嵌套RecyclerView结合CoordinatorLayout滑动内部RecyclerView,CoordinatorLayout不响应的bug
+    新的嵌套滑动机制增加支持子View和父View共同处理滑动事件的能力，子View处理事件的时候，能通知父View同时处理。
+    CoordinatorLayout实现了NestedScrollingParent，纵向RecyclerView是CoordinatorLayout的子View，RecyclerView的滑动能通知到CoordinatorLayout，继而由CoordinatorLayout协调让CollapsingToolbarLayout发生折叠。
+    横向RecyclerView的父View是纵向RecyclerView，而RecyclerView只实现了NestedScrollingChild，无法像CoordinatorLayout一样响应。所以要关闭横向RecyclerView的嵌套滑动功能，让横向RecyclerView如同其他嵌入纵向RecyclerView的view一样，触发折叠。
+       -->

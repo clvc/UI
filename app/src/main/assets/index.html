@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>这是一个标题</title>
+    <style>
+        /*选择器:id选择器,类选择器.*/
+        /*.代表了类选择器;#代表了id选择器*/
+
+        #p1 {
+        color: #00f;
+        font-size: 30px;
+        border: solid 2px #f00;
+        padding: 5px;
+        }
+
+        .tips {
+        color: #f00;
+        font-size: 12px;
+        }
+
+        div {
+        background: #00BEFF;
+        color: #fff;
+        font-size: 24px;
+        border: dashed #FFFF00;
+        padding: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<p id="p1">Android与JS交互实例</p>
+<p class="tips">①.点击Android里的按钮,改变Html里的文字内容</p>
+<div id="div_change_content">等待被改变的内容,啦啦啦啦</div>
+<p class="tips">②.JS调用Android里的方法---弹Toast</p>
+<div id="div_show_toast">点我弹Toast</div>
+<p class="tips">③.JS调用Android里的方法,带参数---弹Toast</p>
+<div id="div_show_toast2">点我弹带参数的Toast</div>
+</body>
+
+<!--这段JS脚本必须写在body标签后面-->
+<!--javascript脚本-->
+<script type="text/javascript">
+			//改变div的内容
+			function changeContent() {
+				//根据id找到一个控件
+				var divChange = document.getElementById("div_change_content");
+				divChange.innerHTML = "呜呜呜,被改变了...";
+			}
+
+			//显示不带参数的toast
+			var showToast=document.getElementById("div_show_toast");
+			//处理点击事件
+			showToast.onclick=function(){
+				mAndroid.showToast();
+			};
+
+			var showToastWithParams=document.getElementById("div_show_toast2");
+			showToastWithParams.onclick=function(){
+				mAndroid.showToastWithParams("我是参数123....");
+			};
+
+</script>
+
+</html>

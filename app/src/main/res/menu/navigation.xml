@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/g1">
+        <item
+            android:id="@+id/action_add"
+            android:icon="@mipmap/add"
+            android:title="add"/>
+        <item
+            android:id="@+id/action_share"
+            android:icon="@mipmap/share"
+            android:title="share"/>
+    </group>
+    <group android:id="@+id/g2">
+        <item
+            android:id="@+id/action_star"
+            android:icon="@mipmap/star"
+            android:title="star"/>
+    </group>
+    <item android:title="other">
+        <menu>
+            <item
+                android:id="@+id/action_new"
+                android:icon="@mipmap/newer"
+                android:title="newer"/>
+            <item
+                android:id="@+id/action_palace"
+                android:icon="@mipmap/palace"
+                android:title="palace"/>
+        </menu>
+
+    </item>
+
+</menu>

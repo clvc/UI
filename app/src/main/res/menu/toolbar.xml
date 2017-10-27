@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:title="搜索"
+        android:icon="@mipmap/search"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_setting"
+        android:title="设置"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_scan"
+        android:title="扫描"
+        app:showAsAction="ifRoom"/>
+
+
+    <item
+        android:id="@+id/action_setting1"
+        android:title="设置1"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_setting2"
+        android:title="设置2"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_setting3"
+        android:title="设置3"
+        app:showAsAction="ifRoom"/>
+</menu>

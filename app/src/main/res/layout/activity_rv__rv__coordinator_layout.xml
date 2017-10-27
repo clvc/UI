@@ -1,0 +1,44 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!--app:layout_scrollFlags="scroll"
+      scroll|enterAlwaysCollapsed、scroll:上拉隐藏,下拉全部展示后方展开
+      scroll|exitUntilCollapsed:固定不动(不设置此属性固定不动)
+      scroll|enterAlways:上拉隐藏,下拉展开
+      snap设置该flag的view在滚动停止时，如果没有完全显示，会自动滚到到最近的一个边界（顶端、中线和下线）。
+      -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="1"
+            app:layout_scrollFlags="scroll|enterAlways"
+            />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_green_dark"
+            android:gravity="center"
+            android:text="2"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+</android.support.design.widget.CoordinatorLayout>

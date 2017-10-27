@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item-->
+    <!--android:id="@+id/action_palacer"-->
+    <!--android:icon="@mipmap/palace"-->
+    <!--android:title="palace"-->
+    <!--app:showAsAction="always"/>-->
+    <!--<item-->
+    <!--android:id="@+id/action_palaces"-->
+    <!--android:icon="@mipmap/palace"-->
+    <!--android:title="palace"-->
+    <!--app:showAsAction="always"/>-->
+    <!--<item-->
+    <!--android:id="@+id/action_palace"-->
+    <!--android:icon="@mipmap/palace"-->
+    <!--android:title="palace"-->
+    <!--app:showAsAction="always"/>-->
+
+
+
+    <item
+        android:id="@+id/action_share"
+        android:title="share"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_search0"
+        android:icon="@mipmap/search"
+        android:title="search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+    <item
+        android:id="@+id/action_updata"
+        android:icon="@mipmap/updata"
+        android:title="updata"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@mipmap/add"
+        android:title="add"
+        app:showAsAction="ifRoom"/>
+
+    <!--<item-->
+    <!--android:id="@+id/action_nine"-->
+    <!--android:icon="@mipmap/delete"-->
+    <!--android:title="nine"-->
+    <!--app:showAsAction="always"/>-->
+
+
+    <item
+        android:id="@+id/action_jump"
+        android:icon="@mipmap/newer"
+        android:title="jump"
+        app:showAsAction="never"/>
+
+</menu>

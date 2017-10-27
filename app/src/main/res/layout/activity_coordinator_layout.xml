@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.palfund.ui.coordinatorlayout.CoordinatorLayoutActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:text="123"
+        android:textColor="@android:color/white"
+        />
+    <!--app:layout_behavior="@string/bottom_sheet_behavior"底部弹出-->
+    <!--app:behavior_peekHeight="0dp"默认显示的高度-->
+    <!--app:behavior_hideable="true"当peekHeight不为0时能否通过拖拽将其完全隐藏-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center"
+        android:text="BottomSheetBehavior"
+        android:textColor="@color/colorAccent"
+        android:textSize="26sp"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="60dp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/textView"
+        app:layout_anchorGravity="center_horizontal"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

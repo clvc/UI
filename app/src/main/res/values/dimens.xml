@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <!--自定义FloatingActionBar的大小-->
+    <dimen name="design_fab_size_normal" tools:ignore="PrivateResource">80dp</dimen>
+    <dimen name="contentInsetStartWithNavigation">0dp</dimen>
+</resources>

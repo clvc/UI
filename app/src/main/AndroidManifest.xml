@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.palfund.ui">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".actionbar.ActionBarActivity"
+            android:theme="@style/ActionBarStyle">
+        </activity>
+        <activity
+            android:name=".actionbar.ActionBar2Activity"
+            android:theme="@style/ActionBarStyle">
+        </activity>
+        <activity
+            android:name=".actionbar.ActionBar3Activity"
+            android:parentActivityName=".actionbar.ActionBarActivity"
+            android:theme="@style/ActionBarStyle">
+        </activity>
+        <activity
+            android:name=".actionbar.ActionBarCustomActivity"
+            android:theme="@style/ActionBarStyle">
+        </activity>
+        <activity
+            android:name=".actionbar.ActionModeActivity"
+            android:theme="@style/ActionBarStyle">
+        </activity>
+        <activity
+            android:name=".actionbar.NavigationListActivity"
+            android:theme="@style/ActionBarStyle">
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".toolbar.ToolbarActivity"
+            android:theme="@style/ToolbarStyle">
+        </activity>
+        <activity
+            android:name=".toolbar.CustomToolbarActivity"
+            android:theme="@style/ToolbarStyle">
+        </activity>
+        <activity android:name=".drawerlayout.DrawerLayoutActivity">
+        </activity>
+        <activity
+            android:name=".drawerlayout.DrawerToggleActivity"
+            android:theme="@style/DrawerToggleStyle">
+        </activity>
+        <activity
+            android:name=".navigationview.NavigationViewActivity"
+            android:theme="@style/ToolbarStyle">
+        </activity>
+        <activity android:name=".coordinatorlayout.CoordinatorLayoutActivity">
+        </activity>
+        <activity
+            android:name=".coordinatorlayout.AppBarActivity"
+            android:theme="@style/ToolbarStyle">
+        </activity>
+        <activity
+            android:name=".coordinatorlayout.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/ToolbarStyle"
+            >
+        </activity>
+        <activity
+            android:name=".coordinatorlayout.AlipayActivity"
+            android:theme="@style/ToolbarStyle">
+        </activity>
+        <activity android:name=".webview.WebViewActivity">
+        </activity>
+        <activity android:name=".webview.JSActivity">
+        </activity>
+        <activity android:name=".recyclerview.RecyclerViewActivity">
+        </activity>
+        <activity android:name=".recyclerview.MultiTypeActivity">
+        </activity>
+        <activity android:name=".textinputlayout.TextInputLayoutActivity">
+        </activity>
+        <activity android:name=".cardview.CardViewActivity">
+        </activity>
+        <activity android:name=".swiperefreshlayout.SwipeRefreshLayoutActivity">
+        </activity>
+        <activity android:name=".flexboxlayout.FlexBoxLayoutActivity">
+        </activity>
+        <activity android:name=".recyclerview.StaggeredActivity">
+        </activity>
+        <activity android:name=".flexboxlayout.RecyclerView4FBLActivity">
+        </activity>
+        <activity android:name=".textswitcher.TextSwitcherActivity">
+        </activity>
+        <activity android:name=".textswitcher.ViewFlipperActivity">
+        </activity>
+        <activity android:name=".topfloat.TopFloatActivity">
+        </activity>
+        <activity android:name=".countdowntimer.CountDownTimerActivity">
+        </activity>
+        <activity android:name=".progressbar.ProgressBarActivity">
+        </activity>
+        <activity android:name=".viewstub.ViewStubActivity">
+        </activity>
+        <activity android:name=".recyclerview.RV_RV_CoordinatorLayoutActivity">
+        </activity>
+        <activity android:name=".autocompletetextview.AutoCompleteTextViewActivity">
+        </activity>
+    </application>
+
+</manifest>

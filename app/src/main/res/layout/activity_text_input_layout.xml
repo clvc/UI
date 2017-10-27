@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.palfund.ui.textinputlayout.TextInputLayoutActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimaryDark">
+
+        <EditText
+            android:id="@+id/editText_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户名"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimaryDark"
+        >
+
+        <EditText
+            android:id="@+id/editText_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="click"
+        android:text="提交"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="send"
+        android:imeOptions="actionSend"
+        android:singleLine="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="go"
+        android:imeOptions="actionGo"
+        android:singleLine="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="search"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="next"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="none"
+        android:imeOptions="actionNone"
+        android:singleLine="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="previous"
+        android:imeOptions="actionPrevious"
+        android:singleLine="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="unspecified"
+        android:imeOptions="actionUnspecified"
+        android:singleLine="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="unspecified"
+        android:imeOptions="actionUnspecified"
+        android:singleLine="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        />
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.palfund.ui.drawerlayout.DrawerLayoutActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:navigationIcon="@mipmap/ic_drawer_home"
+        app:title=" "
+        />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <!--抽屉外面的内容-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_light"
+            android:gravity="center"
+            android:text="outer"
+            android:textColor="@color/colorAccent"
+            android:textSize="26sp"
+            />
+        <!--抽屉里面的内容-->
+        <!--android:clickable="true":解决穿透问题-->
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@android:color/holo_green_light"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="inner"
+            android:textColor="@color/colorAccent"
+            android:textSize="26sp"
+            />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

@@ -1,0 +1,176 @@
+<!--
+  app:dividerDrawableHorizontal="@drawable/divider_hor"
+  app:showDividerHorizontal="beginning|middle|end"
+  app:dividerDrawableVertical="@drawable/divider"
+  app:showDividerVertical="middle|beginning|end"
+  app:dividerDrawable="@drawable/divider"
+  app:showDivider="middle|end|beginning"
+
+  app:flexDirection="row_reverse",
+  子元素的排列方向row(default主轴水平从左到右,副轴从上到下),row_reverse(主轴水平从右到左,副轴从上到下),
+  column(主轴从上到下,副轴水平从左到右),column_reverse(主轴从下到上,副轴水平从左到右)
+
+  app:flexWrap="wrap_reverse"
+  控制单行和多行以及副轴的方向,nowrap(default)不换行,wrap换行,wrap_reverse副轴方向置反
+
+  app:justifyContent="center":控制沿主轴对齐
+  flex_start(左对齐),flex_end(右对齐),center(居中),
+  space_between(两端对齐,项目之间的间隔都相等),space_around(每个项目两侧的间隔相等.所以项目之间的间隔比项目与边框的间隔大一倍.)
+
+  app:alignItems="flex_start":控制沿副轴对齐(单行起作用)
+  stretch(default item将占满整个容器的高度),flex-start(交叉轴的起点对齐),flex-end(交叉轴的终点对齐),
+  center(交叉轴的中点对齐),baseline(项目的第一行文字的基线对齐)
+
+  app:alignContent="flex_start":控制沿副轴对齐(多行起作用)
+  stretch(default轴线占满整个交叉轴),flex-start(与交叉轴的起点对齐),flex-end(与交叉轴的终点对),center(与交叉轴的中点对齐),
+  space-between(与交叉轴两端对齐,轴线之间的间隔平均分布),space-around(每根轴线两侧的间隔都相等.所以轴线之间的间隔比轴线与边框的间隔大一倍)
+  -->
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.flexbox.FlexboxLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/flexboxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        app:alignContent="flex_start"
+        app:dividerDrawableVertical="@drawable/divider"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:showDividerVertical="middle|beginning|end"
+        >
+
+        <!--
+        app:layout_order="1"控制子元素排列的顺序，
+        负值在前，正值在后，按照从小到大的顺序依次排列。
+
+        app:layout_flexGrow="0"定义项目的放大比例
+        默认为0，即如果存在剩余空间，也不放大。
+        其实就是 LinearLayout 中的weight属性，
+        如果所有项目的layout_flexGrow 属性都为1，则它们将等分剩余空间。
+        如果一个项目的layout_flexGrow 属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
+
+        app:layout_flexShrink="0"定义了项目的缩小比例，
+        默认为1，即如果空间不足，该项目将缩小。如果所有项目的
+        layout_flexShrink 属性都为1，当空间不足时，都将等比例缩小。
+        如果一个项目的flex-shrink属性为0，其他项目都为1，
+        则空间不足时，前者不缩小。负值对该属性无效。
+
+        app:layout_alignSelf="flex_end"
+        属性允许单个子元素有与其他子元素不一样的对齐方式，
+        可覆盖 alignItems 属性。默认值为auto，
+        表示继承父元素的alignItems 属性，如果没有父元素，
+        则等同于stretch。
+
+        app:layout_flexBasisPercent="3%"
+        子元素占据的主轴空间的百分比。它的默认值为auto，即子元素的本来大小。
+
+
+        app:layout_wrapBefore="true"属性控制强制换行，
+        默认值为false,如果将一个子元素的这个属性设置为true，那么这个子元素将会成为一行的第一个元素。这个属性将忽略flex_wrap 设置的 noWrap值。
+        -->
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:background="#43eeff"
+            android:gravity="center"
+            android:text="1"
+            app:layout_alignSelf="stretch"
+            app:layout_order="1"/>
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="#ef3344"
+            android:gravity="center"
+            android:text="2"
+            app:layout_order="3"/>
+
+        <TextView
+            android:id="@+id/textview3"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="#5ff344"
+            android:gravity="center"
+            android:text="3"
+            app:layout_order="2"/>
+
+        <TextView
+            android:id="@+id/textview4"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="#ee998f"
+            android:gravity="center"
+            android:text="4"
+            app:layout_flexBasisPercent="50%"
+            app:layout_order="4"/>
+
+        <TextView
+            android:id="@+id/textview5"
+            android:layout_width="40dp"
+            android:layout_height="80dp"
+            android:background="#eeff22"
+            android:gravity="center"
+            android:text="5"
+            app:layout_flexGrow="1"
+            app:layout_flexShrink="0"
+            app:layout_order="5"
+            app:layout_wrapBefore="true"/>
+
+        <TextView
+            android:id="@+id/textview6"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="#3322ff"
+            android:gravity="center"
+            android:text="6"
+            app:layout_flexGrow="1"
+            app:layout_flexShrink="1"
+            app:layout_order="6"/>
+
+        <TextView
+            android:id="@+id/textview7"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:background="#8888ff"
+            android:gravity="center"
+            android:text="7"
+            app:layout_flexShrink="0"
+            app:layout_order="7"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:text="big"
+            android:textSize="25sp"
+            app:layout_order="7"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:text="big"
+            android:textSize="25sp"
+            app:layout_order="7"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:text="big"
+            android:textSize="25sp"
+            app:layout_order="7"/>
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
