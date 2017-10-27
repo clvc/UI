@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -16,7 +17,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TextInputLayoutActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +36,7 @@ public class TextInputLayoutActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (!isWord(s.toString())) {
+                if (!TextUtils.isEmpty(s) && !isWord(s.toString())) {
                     // 在setError设置错误消息之前开启这个功能意味着在显示错误的时候布局不会变化。
                     textInputLayout_name.setErrorEnabled(true);
                     textInputLayout_name.setError("用户名输入错误");

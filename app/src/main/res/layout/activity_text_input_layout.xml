@@ -38,7 +38,6 @@
             android:hint="请输入密码"
             android:imeOptions="actionDone"
             android:singleLine="true"
-
             />
 
     </android.support.design.widget.TextInputLayout>
@@ -48,8 +47,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="@android:drawable/edit_text"
         android:onClick="click"
-        android:text="提交"
+        android:text="hideKeyboard"
+        android:textAllCaps="false"
         />
 
     <EditText
