@@ -60,19 +60,27 @@ public class TextSwitcherActivity extends AppCompatActivity {
                 textView.setTextColor(Color.parseColor("#ffffff"));
                 textView.setEllipsize(TextUtils.TruncateAt.END);
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup
-                        .LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                        .LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 params.gravity = Gravity.CENTER_VERTICAL;
                 textView.setLayoutParams(params);
+                textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(TextSwitcherActivity.this, "text", Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                });
                 return textView;
             }
         });
-        mTextSwitcher.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(TextSwitcherActivity.this, news[index - 1], Toast.LENGTH_SHORT)
-                        .show();
-            }
-        });
+        //        mTextSwitcher.setOnClickListener(new View.OnClickListener() {
+        //            @Override
+        //            public void onClick(View v) {
+        //                Toast.makeText(TextSwitcherActivity.this, news[index - 1], Toast
+        // .LENGTH_SHORT)
+        //                        .show();
+        //            }
+        //        });
         handler.sendEmptyMessage(0);
         //mHandler.post(new SwitcherRunnable());
 
