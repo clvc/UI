@@ -69,8 +69,8 @@ public class TextSwitcherActivity extends AppCompatActivity {
         mTextSwitcher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(TextSwitcherActivity.this, news[index % news.length], Toast
-                        .LENGTH_SHORT).show();
+                Toast.makeText(TextSwitcherActivity.this, news[index - 1], Toast.LENGTH_SHORT)
+                        .show();
             }
         });
         handler.sendEmptyMessage(0);

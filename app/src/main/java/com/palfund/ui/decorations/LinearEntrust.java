@@ -7,10 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-/**
- * 作者：请叫我百米冲刺 on 2016/12/6 上午11:32
- * 邮箱：mail@hezhilin.cc
- */
+
 
 public class LinearEntrust extends  SpacesItemDecorationEntrust {
 

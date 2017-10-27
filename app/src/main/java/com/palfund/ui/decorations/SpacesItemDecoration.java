@@ -7,9 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
-/**
- * Created by Au61 on 2016/1/15.
- */
+
 public class SpacesItemDecoration extends RecyclerView.ItemDecoration {
 
     private  SpacesItemDecorationEntrust mEntrust;
